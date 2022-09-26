@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando Identidade</title>
+    <script>
+
+        alert("ALERT do JavaScript!");
+
+        var num1;
+        var num2;
+
+        num1 = prompt("Número 1: ");
+
+        num2 = prompt("Número 2: ");
+
+        var soma = parseFloat(num1) + parseFloat(num2);
+
+        var sub = parseFloat(num1) - parseFloat(num2);
+
+        var multi = parseFloat(num1) * parseFloat(num2);
+
+        var div = parseFloat(num1) / parseFloat(num2);
+
+        var res = parseFloat(num1) % parseFloat(num2);
+
+        var decisao = confirm("Para exibir os cálculos clique em OK");
+        if (decisao) {
+            alert("Resultado soma: " + soma + "\n" + 
+            "Resultado subtração: " + sub + "\n" + 
+            "Resultado multiplicação: " + multi + "\n" + 
+            "Resultado divisão: " + div + "\n" + 
+            "Resultado resto: " + res);
+        } else {
+            alert("Você clicou no botão CANCELAR,\n resultado: " + decisao);
+        }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
