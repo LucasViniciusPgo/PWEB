@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form>
+        Digite um texto: <input type="text" id="name">
+        <br><br>
+        CHECKBOX 1 <input type="checkbox" id="check1" onclick="myFunction()">
+        CHECKBOX 1 <input type="checkbox" id="check2" onclick="myFunction()">
+    </form>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("check1");
+            var y = document.getElementById("check2");
+            if (x.checked) {
+                document.getElementById("name").value = document.getElementById("name").value.toUpperCase();
+            }
+            if (y.checked) {
+                document.getElementById("name").value = document.getElementById("name").value.toLowerCase();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
