@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste DOM</title>
+    <script>
+        function validar() {
+
+            if (document.forms.formulario1.elements[0].value.length < 10) {
+                alert("Preencha campo NOME com mais de 10 caracteres!");
+                document.forms.formulario1.elements[0].focus();
+                return false;
+            };
+
+            if (document.forms.formulario1.elements["idEmail"].value.indexOf('@') == -1) {
+                alert("Preencha campo E-MAIL com o <'@'>");
+                document.forms.formulario1.elements.idEmail.focus();
+                return false;
+            }
+            if (document.forms.formulario1.elements["idEmail"].value.indexOf('.') == -1) {
+                alert("Preencha campo E-MAIL com o <'.'>");
+                document.forms.formulario1.elements.idEmail.focus();
+                return false;
+            }
+            if (document.forms.formulario1.elements.idMensagem.value == "" || document.forms.formulario1.elements.idMensagem.value.length < 20) {
+                alert("É necessario preencher o campo MENSAGEM com mais de 20 caracteres!");
+                document.getElementById("idMensagem").focus();
+                return false;
+            }
+        }
+        function msg() {
+            var x = document.getElementById("check1");
+            var y = document.getElementById("check2");
+            if (x.checked) {
+                alert("Volte sempre à está página")
+            }
+            if (y.checked) {
+                alert("Que bom que você voltou a visitar esta página!")
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <form style="background-color: rgb(142, 232, 255);" action="teste" method="POST" name="formulario1" id="formulario1"
+        onsubmit="return validar();">
+
+        <div id="principal" width=200 heigth=200 align=center>
+            Nome Completo:
+            <input name="idNome" type="text" id="idNome" size="52" maxlength="150">
+            <br>
+            <br> E-Mail :
+            <input name="idEmail" type="email" id="idEmail" size="52" maxlength="150">
+            <br>
+            <br> Mensagem :
+            <textarea name="idMensagem" cols="50" rows="8" id="idMensagem" value="" input></textarea>
+            <br>
+            <br>
+            <br>
+
+            <br> Pesquisa: Primeira vez nesta página??
+            <br>
+            <br>
+            SIM <input type="checkbox" id="check1" onclick="msg()" form="formulario1">
+            NÃO <input type="checkbox" id="check2" onclick="msg()" form="formulario1">
+            <br>
+            <br>
+            <input name="Submit" type="submit" form="formulario1" value="Submit">
+            <input name="Reset" type="reset" form="formulario1" value="Redefinir">
+        </div>
+    </form>
+</body>
+
+</html>
