@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="janela" src="janelafechada.png" onmouseover="getJanela()">
+    <script>
+        var img = document.getElementById('janela');
+
+        img.addEventListener('mouseover',
+            function () {
+                img.src = 'janelaaberta.png'
+            })
+        img.addEventListener('mouseout',
+            function () {
+                img.src = 'janelafechada.png'
+            })
+        img.addEventListener('click',
+            function () {
+                img.src = 'janelaquebra.png'
+            })
+    </script>
+</body>
+
+</html>
